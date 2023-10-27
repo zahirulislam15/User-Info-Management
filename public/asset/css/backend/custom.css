@@ -1,0 +1,7 @@
+/*.main-header .navbar-nav .nav-item .nav-link.text-dark.active {*/
+/*    background: #fff;*/
+/*    color: #000;*/
+/*}*/
+.required-star:after {
+    content:"*";color:red;
+}

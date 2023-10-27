@@ -1,0 +1,82 @@
+li {
+    list-style: none;
+}
+.amrPay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.amrPay .container {
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+}
+.amarPay__left {
+    padding: 90px;
+    border-radius: 5px;
+}
+
+.amarPay__right {
+    background: #f1f1f1;
+    padding: 30px;
+}
+
+.amarPay__right .amarPay__right__input {
+    outline: none;
+    border: none;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 5px 12px;
+    margin-top: 10px;
+}
+
+.amarPay__right .amarPay__right__button {
+    padding: 10px 25px;
+}
+
+.amarPay__right__payImg {
+    width: 60px;
+    height: 40px;
+    background: white;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin: 10px 10px;
+}
+
+.amarPay__right_img-radio {
+    position: relative;
+}
+
+.amarPay__right_radio {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.amarPay__right_radio[type='radio']:checked {
+    background: hsla(150, 75%, 50%, 1);
+    color: hsla(215, 0%, 100%, 1);
+    box-shadow: 0px 0px 20px hsla(150, 100%, 50%, 0.75);
+}
+
+.amarPay__right_radio[type='radio']:checked::after {
+    color: green;
+    font-family: FontAwesome;
+    content: '\f00c';
+    font-size: 13px;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 20px;
+    width: 20px;
+    border: 2px solid green;
+    line-height: 20px;
+    text-align: center;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0px 2px 5px -2px hsla(0, 0%, 0%, 0.25);
+}
