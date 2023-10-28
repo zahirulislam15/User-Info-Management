@@ -39,7 +39,7 @@ Route::middleware('auth')->group(function () {
     // Route::get('/user/create', [MemberController::class, 'createShow'])->name('user.create');
     // Route::post('/user/create/post', [MemberController::class, 'create'])->name('user.create.post');
     Route::get('/user/edit', [MemberController::class, 'edit'])->name('user.edit');
-    Route::post('/user/udate', [MemberController::class, 'update'])->name('user.update');
+    Route::post('/user/udate/{id}', [MemberController::class, 'update'])->name('user.update');
     Route::get('/user/delete', [MemberController::class, 'delete'])->name('user.delete');
 
 

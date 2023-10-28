@@ -52,7 +52,7 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label class="form-label">Gender<span style="color:red;">*</span></label>
+                                            <label class="form-label">Gender</label>
                                             <select class="col-md-12" name="gender" id="">
                                                 <option value="1" @if (isset($user)) @if ($user->gender == 1) 'selected' @endif @endif>Male</option>
                                                 <option value="2" @if (isset($user)) @if ($user->gender == 2) 'selected' @endif @endif>Female</option>
@@ -60,7 +60,7 @@
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label"> Blood Group<span style="color:red;">*</span></label>
+                                            <label class="form-label"> Blood Group</label>
                                             <select class="col-md-12" name="blood_group" id="">
                                                 <option value="A+" @if (isset($user)) @if ($user->blood_group == 'A+') 'selected' @endif @endif> A+</option>
                                                 <option value="A-" @if (isset($user)) @if ($user->blood_group == 'A+-') 'selected' @endif @endif>A-</option>
@@ -83,7 +83,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="row">
-                                                <label class="form-label">Present Address<span style="color:red;">*&nbsp;&nbsp;&nbsp;</span>
+                                                <label class="form-label">Present Address<span style="color:red;">&nbsp;&nbsp;&nbsp;</span>
                                                 <input type="checkbox" name="same" id="">&nbsp;<span><i>Same As Parmanent Address</i></span></label>
                                             </div>                                            
                                             <input type="text" class="form-control" placeholder="" name="present_address" value="{{ $user->present_address }}">

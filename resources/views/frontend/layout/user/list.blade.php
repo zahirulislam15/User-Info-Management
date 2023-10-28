@@ -35,20 +35,49 @@
                             <tr id="user_ids{{$data->id}}">
                                 
                                 <td>{{strtoupper($data->name)}}</td>
-                                <td>{{$data->unique_id}}</td>
+                                <td>{{$data->unique_no}}</td>
                                 <td>{{$data->dob}}</td>
-                                <td>{{$data->gender}}</td>
+                                <td>@if ($data->gender == 1) Male
+                                    @elseif ($data->gender == 2 ) Female
+                                    @else Other
+                                    @endif
+                                </td>
                                 <td>{{$data->father_name}}</td>
                                 <td>{{$data->mother_name}}</td>
-                                <td>{{$data->address}}</td>
+                                <td>{{$data->present_address}}</td>
                                 <td>
                                     <div class="btn-group mr-2" role="group" aria-label="First group">
-                                        {{-- <a href="{{route('user.edit',$data->id)}}" class="btn btn-primary btn-sm"><i class="bi bi-pencil-square">Edit</i></a> --}}
-                                        <button class="print_div">Download</button>
+                                        {{-- <button class="print_div">Download</button> --}}
+                                        <button type="button" class="btn btn-primary btn-sm" title="{{__('app.Download')}}" data-bs-toggle="modal" data-bs-target="#downloadModal{{$data->id}}">Download</button>
                                         <button type="button" class="btn btn-danger btn-sm" title="{{__('app.Delete')}}" data-bs-toggle="modal" data-bs-target="#deleteModal{{$data->id}}"><i class="bi bi-trash-fill">Delete</i></button>
 
                                     </div>
                                 </td>
+                                <div class="modal fade" id="DownloadModal{{$data->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color:blueviolet;">
+                                                <h4 class="modal-title text-white" id="exampleModalLabel">Download User Information</h4>
+                                                <button type="button" class="btn-close btn-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            
+                                            <div class="modal-body">
+                                                <div class="card">
+                                                    <div class="card-body d-flex justify-content-center">
+                                                        <h1>User Information Management</h1>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">No</button>
+                                                <button type="submit" class="btn btn-primary btn-sm">Yes</button>
+                                            </div>
+                                            
+
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="modal fade" id="deleteModal{{$data->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content">
