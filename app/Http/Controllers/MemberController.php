@@ -58,6 +58,8 @@ class MemberController extends Controller
         $user->gender = $request->gender; 
         $user->blood_group = $request->blood_group; 
         $user->father_name = $request->father_name; 
+        $user->f_nationality = $request->f_nationality; 
+        $user->m_nationality = $request->m_nationality; 
         $user->mother_name = $request->mother_name; 
        
         // return $request;

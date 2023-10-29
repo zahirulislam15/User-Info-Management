@@ -27,6 +27,8 @@
     <link href="{{url('backend/assets/vendor/quill/quill.bubble.css')}}" rel="stylesheet">
     <link href="{{url('backend/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
     <link href="{{url('backend/assets/vendor/simple-datatables/style.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
 
     <!-- Template Main CSS File -->
     <link href="{{url('backend/assets/css/style.css')}}" rel="stylesheet">
@@ -52,7 +54,7 @@
         @yield('content')
 
     </main>
-
+    @stack('js')
     @include('frontend.partial.footer')
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
@@ -67,6 +69,7 @@
     <script src="{{url('backend/assets/vendor/simple-datatables/simple-datatables.js')}}"></script>
     <script src="{{url('backend/assets/vendor/tinymce/tinymce.min.js')}}"></script>
     <script src="{{url('backend/assets/vendor/php-email-form/validate.js')}}"></script>
+    <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 
     <!-- Template Main JS File -->
     <script src="{{url('backend/assets/js/main.js')}}"></script>

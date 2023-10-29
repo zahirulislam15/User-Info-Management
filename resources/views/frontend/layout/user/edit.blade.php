@@ -26,11 +26,11 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label class="form-label">Name<span style="color:red;">*</span></label>
+                                            <label class="form-label">নামঃ <span style="color:red;">*</span></label>
                                             <input type="text" class="form-control" placeholder="" name="name" value="{{ $user->name }}" required>
                                         </div>
                                         <div class="col-md-6"> 
-                                            <label class="form-label">Birth Date<span style="color:red;">*</span></label>
+                                            <label class="form-label">জন্ম তারিখঃ <span style="color:red;">*</span></label>
                                             <input type="date" class="form-control" placeholder="" name="dob" value="{{ $user->dob }}">
                                         </div>
                                     </div>
@@ -39,11 +39,11 @@
                                 <div class="col-md-12">
                                     <div class="row">                                       
                                         <div class="col-md-6">
-                                            <label class="form-label">Phone Number<span style="color:red;">*</span></label>
+                                            <label class="form-label">মোবাইল নম্বরঃ <span style="color:red;">*</span></label>
                                             <input type="text" class="form-control" name="phone" value="{{ $user->phone }}" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label">NID / Birth Certificate No.</label>
+                                            <label class="form-label">জন্ম নিবন্ধন নম্বরঃ</label>
                                             <input type="text" class="form-control" name="nid" value="{{ $user->nid }}">
                                         </div>
                                     </div>
@@ -52,15 +52,15 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label class="form-label">Gender</label>
+                                            <label class="form-label">লিঙ্গঃ</label>
                                             <select class="col-md-12" name="gender" id="">
-                                                <option value="1" @if (isset($user)) @if ($user->gender == 1) 'selected' @endif @endif>Male</option>
-                                                <option value="2" @if (isset($user)) @if ($user->gender == 2) 'selected' @endif @endif>Female</option>
-                                                <option value="3" @if (isset($user)) @if ($user->gender == 3) 'selected' @endif @endif>Other</option>
+                                                <option value="1" @if (isset($user)) @if ($user->gender == 1) 'selected' @endif @endif>পুরুষ </option>
+                                                <option value="2" @if (isset($user)) @if ($user->gender == 2) 'selected' @endif @endif>নারী</option>
+                                                <option value="3" @if (isset($user)) @if ($user->gender == 3) 'selected' @endif @endif>অন্যান্য </option>
                                             </select>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label"> Blood Group</label>
+                                            <label class="form-label"> রক্তের গ্রুপঃ</label>
                                             <select class="col-md-12" name="blood_group" id="">
                                                 <option value="A+" @if (isset($user)) @if ($user->blood_group == 'A+') 'selected' @endif @endif> A+</option>
                                                 <option value="A-" @if (isset($user)) @if ($user->blood_group == 'A+-') 'selected' @endif @endif>A-</option>
@@ -78,13 +78,13 @@
                                 <div class="col-md-12">
                                     <div class="row">                                        
                                         <div class="col-md-6">
-                                            <label class="form-label">Parmanent Address<span style="color:red;">*</span></label>
+                                            <label class="form-label">স্থায়ী ঠিকানাঃ <span style="color:red;">*</span></label>
                                             <input type="text" class="form-control" name="permanent_address" value="{{ $user->permanent_address }}" required>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="row">
-                                                <label class="form-label">Present Address<span style="color:red;">&nbsp;&nbsp;&nbsp;</span>
-                                                <input type="checkbox" name="same" id="">&nbsp;<span><i>Same As Parmanent Address</i></span></label>
+                                                <label class="form-label">জন্ম স্থানঃ<span style="color:red;">&nbsp;&nbsp;&nbsp;</span>
+                                                <input type="checkbox" name="same" id="">&nbsp;<span><i>একই স্থান</i></span></label>
                                             </div>                                            
                                             <input type="text" class="form-control" placeholder="" name="present_address" value="{{ $user->present_address }}">
                                         </div>
@@ -94,12 +94,25 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label class="form-label">Father Name<span style="color:red;">*</span></label>
+                                            <label class="form-label">পিতার নামঃ<span style="color:red;">*</span></label>
                                             <input type="text" class="form-control" placeholder="" name="father_name" value="{{ $user->father_name }}" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="form-label"> Mother Name<span style="color:red;">*</span></label>
-                                            <input type="text" class="form-control" name="mother_name" value="{{ $user->mother_name }}" required>
+                                            <label class="form-label">পিতার জাতীয়তাঃ<span style="color:red;">*</span></label>
+                                            <input type="text" class="form-control" name="f_nationality" value="{{ $user->f_nationality }}" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="form-label">মাতার নামঃ <span style="color:red;">*</span></label> 
+                                            <input type="text" class="form-control" placeholder="" name="mother_name" value="{{ $user->mother_name }}" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">মায়ের জাতীয়তাঃ<span style="color:red;">*</span></label>
+                                            <input type="text" class="form-control" name="m_nationality" value="{{ $user->m_nationality }}" required>
                                         </div>
                                     </div>
                                 </div>
