@@ -48,6 +48,7 @@
                                 <td>
                                     <div class="btn-group mr-2" role="group" aria-label="First group">
                                         {{-- <button class="print_div">Download</button> --}}
+                                        <a href="{{route('download.user.info',$data->id)}}">Download</a>
                                         <button type="button" class="btn btn-primary btn-sm" title="{{__('app.Download')}}" data-bs-toggle="modal" data-bs-target="#downloadModal{{$data->id}}">Download</button>
                                         <button type="button" class="btn btn-danger btn-sm" title="{{__('app.Delete')}}" data-bs-toggle="modal" data-bs-target="#deleteModal{{$data->id}}"><i class="bi bi-trash-fill">Delete</i></button>
 

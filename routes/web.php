@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/user/edit', [MemberController::class, 'edit'])->name('user.edit');
     Route::post('/user/udate/{id}', [MemberController::class, 'update'])->name('user.update');
     Route::get('/user/delete', [MemberController::class, 'delete'])->name('user.delete');
+    Route::get('/user/info/download/{id}', [MemberController::class, 'downloadInfo'])->name('download.user.info');
 
 
     

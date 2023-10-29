@@ -66,5 +66,10 @@ class MemberController extends Controller
 
         return redirect()->route('dashboard');
     }
+
+    public function downloadInfo($id){
+        $data = User::find($id);
+        return view('frontend/layout/user/download', compact('data'));
+    }
     
 }
